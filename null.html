@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lan="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let currentSlide = 0;
+        let autoSlideInterval;
+      
+        function showSlide(index) {
+          const slides = document.querySelectorAll('.slide');
+      
+          slides.forEach((slide, i) => {
+            if (i === index) {
+              slide.style.display = 'block';
+            } else {
+              slide.style.display = 'none';
+            }
+          });
+        }
+      
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % 3; // Change 3 to the number of slides
+          showSlide(currentSlide);
+        }
+      
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + 3) % 3; // Change 3 to the number of slides
+          showSlide(currentSlide);
+        }
+      
+        function toggleAuto() {
+          if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = null;
+          } else {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+          }
+        }
+      
+        // Initial setup
+        toggleAuto(); // Start automatic slideshow immediately
+      </script>
+      
+      
+
+
+<body>
+    <header class="div">
+        <div class="div-2">
+            <img loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/62ad23e1f085d7cf7bed52687c7f98bd89446cff328641a5bcf491242fe0e01a?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ad23e1f085d7cf7bed52687c7f98bd89446cff328641a5bcf491242fe0e01a?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ad23e1f085d7cf7bed52687c7f98bd89446cff328641a5bcf491242fe0e01a?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ad23e1f085d7cf7bed52687c7f98bd89446cff328641a5bcf491242fe0e01a?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ad23e1f085d7cf7bed52687c7f98bd89446cff328641a5bcf491242fe0e01a?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ad23e1f085d7cf7bed52687c7f98bd89446cff328641a5bcf491242fe0e01a?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ad23e1f085d7cf7bed52687c7f98bd89446cff328641a5bcf491242fe0e01a?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ad23e1f085d7cf7bed52687c7f98bd89446cff328641a5bcf491242fe0e01a?apiKey=a83078002d414708940523294f4b4bc7&"
+                class="img" />
+            <div class="div-3">RAHEZO</div>
+        </div>
+        </div>
+        </div>
+        <div class="div-8">
+            <header class="div-9">Home</header>
+            <header class="div-10">Products</header>
+            <header class="div-11">Reviews</header>
+            <header class="div-12">Contact Us</header>
+            <header class="div-13">About</header>
+        </div>
+        </div>
+        <div class="container">
+            <input type="text" name="text" class="input" required="" placeholder="Search">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                    <title>Search</title>
+                    <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none"
+                        stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+                        stroke-width="32" d="M338.29 338.29L448 448"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="category-images">
+            <img loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/d47be8ddcc8dca85286b50aa49b18c960666fb877450a74c8ccae939ae77c2f2?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d47be8ddcc8dca85286b50aa49b18c960666fb877450a74c8ccae939ae77c2f2?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d47be8ddcc8dca85286b50aa49b18c960666fb877450a74c8ccae939ae77c2f2?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d47be8ddcc8dca85286b50aa49b18c960666fb877450a74c8ccae939ae77c2f2?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d47be8ddcc8dca85286b50aa49b18c960666fb877450a74c8ccae939ae77c2f2?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d47be8ddcc8dca85286b50aa49b18c960666fb877450a74c8ccae939ae77c2f2?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d47be8ddcc8dca85286b50aa49b18c960666fb877450a74c8ccae939ae77c2f2?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d47be8ddcc8dca85286b50aa49b18c960666fb877450a74c8ccae939ae77c2f2?apiKey=a83078002d414708940523294f4b4bc7&"
+                class="category-images__img" />
+            <img loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/90edf8293457de8fadded0808a7104aa702c199ef00c0843c6fb319619777561?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/90edf8293457de8fadded0808a7104aa702c199ef00c0843c6fb319619777561?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/90edf8293457de8fadded0808a7104aa702c199ef00c0843c6fb319619777561?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/90edf8293457de8fadded0808a7104aa702c199ef00c0843c6fb319619777561?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/90edf8293457de8fadded0808a7104aa702c199ef00c0843c6fb319619777561?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/90edf8293457de8fadded0808a7104aa702c199ef00c0843c6fb319619777561?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/90edf8293457de8fadded0808a7104aa702c199ef00c0843c6fb319619777561?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/90edf8293457de8fadded0808a7104aa702c199ef00c0843c6fb319619777561?apiKey=a83078002d414708940523294f4b4bc7&"
+                class="category-images__img" />
+        </div>
+    </header>
+    <div id="slider-container">
+        <div class="slide">
+          <img src="C:\Users\Rooman\Downloads\Video\Screenshot 2024-01-03 210021.png" width="100%" height="100%"  alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="C:\Users\Rooman\Downloads\Video\Screenshot 2024-01-03 205959.png"width="100%" height="100%" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="C:\Users\Rooman\Downloads\Video\Screenshot 2024-01-03 205815.png" width="100%" height="100%"alt="Slide 3">
+        </div>
+      
+        <button id="prev" onclick="prevSlide()">&#10094;
+        </button>
+        <button id="next" onclick="nextSlide()">&#10095;</button>
+
+       
+      </div>
+
+
+
+
+      <section class="text1">
+        <h1>Trending Products</h1>
+      </div>
+
+      <img  class="box1" src="C:\Users\Rooman\Downloads\Compressed\Pixel Patch\Pixel Patch\Imei repair tool\Screenshot 2024-01-03 230905.png" alt="">
+      <img  class="box2" src="C:\Users\Rooman\Downloads\Compressed\Pixel Patch\Pixel Patch\Imei repair tool\Screenshot 2024-01-03 230848.png" alt="">
+      <img  class="box3" src="C:\Users\Rooman\Downloads\Compressed\Pixel Patch\Pixel Patch\Imei repair tool\Screenshot 2024-01-03 230823.png" alt="">
+      <section class="text2">
+        <h1>_________________________________________________________________Our Features_________________________________________________________________</h1>
+      </div>
+
+
+
+      <div class="image321">
+        <img src="C:\Users\Rooman\Desktop\Semester Project Rooman_PF\Screenshot 2024-01-03 232837.png"  width="999px">
+
+      </div>
+
+
+      <div class="main-container">
+        <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/ec88724d99c25385d405c3adb4d45ea83f2918b55d4624012f974ebf6b9548a4?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ec88724d99c25385d405c3adb4d45ea83f2918b55d4624012f974ebf6b9548a4?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ec88724d99c25385d405c3adb4d45ea83f2918b55d4624012f974ebf6b9548a4?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ec88724d99c25385d405c3adb4d45ea83f2918b55d4624012f974ebf6b9548a4?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ec88724d99c25385d405c3adb4d45ea83f2918b55d4624012f974ebf6b9548a4?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ec88724d99c25385d405c3adb4d45ea83f2918b55d4624012f974ebf6b9548a4?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ec88724d99c25385d405c3adb4d45ea83f2918b55d4624012f974ebf6b9548a4?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ec88724d99c25385d405c3adb4d45ea83f2918b55d4624012f974ebf6b9548a4?apiKey=a83078002d414708940523294f4b4bc7&"class="image-wrapper" aria-label="Image" />
+      </div>
+      
+      <style>
+        .main-container {
+          backdrop-filter: blur(2px);
+          background-color: #b3b7b8;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 42px 26px;
+        }
+      
+        @media (max-width: 991px) {
+          .main-container {
+            padding: 0 20px;
+          }
+        }
+      
+        .image-wrapper {
+          aspect-ratio: 1.01;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          overflow: hidden;
+        }
+      </style>
+      <div class="main-container">
+        <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/bd142fb13f6eac62afe3f4777d98001a3776e86b04a1b5c0eba43c2f03b4578d?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/bd142fb13f6eac62afe3f4777d98001a3776e86b04a1b5c0eba43c2f03b4578d?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bd142fb13f6eac62afe3f4777d98001a3776e86b04a1b5c0eba43c2f03b4578d?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/bd142fb13f6eac62afe3f4777d98001a3776e86b04a1b5c0eba43c2f03b4578d?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/bd142fb13f6eac62afe3f4777d98001a3776e86b04a1b5c0eba43c2f03b4578d?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bd142fb13f6eac62afe3f4777d98001a3776e86b04a1b5c0eba43c2f03b4578d?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/bd142fb13f6eac62afe3f4777d98001a3776e86b04a1b5c0eba43c2f03b4578d?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/bd142fb13f6eac62afe3f4777d98001a3776e86b04a1b5c0eba43c2f03b4578d?apiKey=a83078002d414708940523294f4b4bc7&"class="image" aria-role="img" />
+      </div>
+      
+      <style>
+        .main-container {
+          backdrop-filter: blur(2px);
+          background-color: #b3b7b8;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 50px 41px 50px 9px;
+        }
+      
+        @media (max-width: 991px) {
+          .main-container {
+            padding-right: 20px;
+          }
+        }
+      
+        .image {
+          aspect-ratio: 1.36;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          overflow: hidden;
+          margin: 40px 0 5px;
+        }
+      </style>
+      <header class="main-container">
+        <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/bc197f9b1ed8661cc4416f1f16390c08812395e40162b54db0dfc87a3e4e367b?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/bc197f9b1ed8661cc4416f1f16390c08812395e40162b54db0dfc87a3e4e367b?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bc197f9b1ed8661cc4416f1f16390c08812395e40162b54db0dfc87a3e4e367b?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/bc197f9b1ed8661cc4416f1f16390c08812395e40162b54db0dfc87a3e4e367b?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/bc197f9b1ed8661cc4416f1f16390c08812395e40162b54db0dfc87a3e4e367b?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bc197f9b1ed8661cc4416f1f16390c08812395e40162b54db0dfc87a3e4e367b?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/bc197f9b1ed8661cc4416f1f16390c08812395e40162b54db0dfc87a3e4e367b?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/bc197f9b1ed8661cc4416f1f16390c08812395e40162b54db0dfc87a3e4e367b?apiKey=a83078002d414708940523294f4b4bc7&"class="image" aria-label="Image" />
+      </header>
+      <style>
+        .main-container {
+          backdrop-filter: blur(2px);
+          background-color: #b3b7b8;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 42px 35px 42px 20px;
+        }
+        @media (max-width: 991px) {
+          .main-container {
+            padding-right: 20px;
+          }
+        }
+        .image {
+          aspect-ratio: 1.01;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          overflow: hidden;
+        }
+      </style>
+      <header class="main-container">
+        <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/b50f2c6240de2bf10c504aea158f08b1e2308b7e234974ae2de63ee6d9dfab42?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b50f2c6240de2bf10c504aea158f08b1e2308b7e234974ae2de63ee6d9dfab42?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b50f2c6240de2bf10c504aea158f08b1e2308b7e234974ae2de63ee6d9dfab42?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b50f2c6240de2bf10c504aea158f08b1e2308b7e234974ae2de63ee6d9dfab42?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b50f2c6240de2bf10c504aea158f08b1e2308b7e234974ae2de63ee6d9dfab42?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b50f2c6240de2bf10c504aea158f08b1e2308b7e234974ae2de63ee6d9dfab42?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b50f2c6240de2bf10c504aea158f08b1e2308b7e234974ae2de63ee6d9dfab42?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b50f2c6240de2bf10c504aea158f08b1e2308b7e234974ae2de63ee6d9dfab42?apiKey=a83078002d414708940523294f4b4bc7&"class="img" />
+      </header>
+      <style>
+        .main-container {
+          backdrop-filter: blur(2px);
+          margin: auto;
+          background-color: #b3b7b8;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 42px 43px 42px 17px;
+          width: 200px;
+        }
+      
+        @media (max-width: 991px) {
+          .main-container {
+            padding-right: 20px;
+          }
+        }
+      
+        .img {
+          aspect-ratio: 1.01;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          overflow: hidden;
+          width: 200px;
+        }
+      </style>
+      <!-- <section class="main-container">
+        <header class="header">
+          <h2 class="title">XP-21</h2>
+          <span class="subtitle">Electric System</span>
+        </header>
+        <div class="buy-button">
+          <a href="#" class="buy-link">Buy</a>
+        </div>
+        <div class="image-container">
+          <img srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/27a93fbdcd5842e3c5fe8f573f064a3eb8bc9753fb5d2527c23ec08de90e50ff?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/27a93fbdcd5842e3c5fe8f573f064a3eb8bc9753fb5d2527c23ec08de90e50ff?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/27a93fbdcd5842e3c5fe8f573f064a3eb8bc9753fb5d2527c23ec08de90e50ff?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/27a93fbdcd5842e3c5fe8f573f064a3eb8bc9753fb5d2527c23ec08de90e50ff?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/27a93fbdcd5842e3c5fe8f573f064a3eb8bc9753fb5d2527c23ec08de90e50ff?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/27a93fbdcd5842e3c5fe8f573f064a3eb8bc9753fb5d2527c23ec08de90e50ff?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/27a93fbdcd5842e3c5fe8f573f064a3eb8bc9753fb5d2527c23ec08de90e50ff?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/27a93fbdcd5842e3c5fe8f573f064a3eb8bc9753fb5d2527c23ec08de90e50ff?apiKey=a83078002d414708940523294f4b4bc7&"alt="XP-21 Image" class="image" loading="lazy">
+        </div>
+    </section>
+
+
+      
+      <style>
+        .main-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+          border-radius: 48px;
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+          background-color: #b3b7b8;
+          padding: 10px 27px 28px 19px;
+          width: 200px;
+          height: 150px;
+margin: auto;
+position: relative;
+        }
+        
+        @media (max-width: 991px) {
+          .main-container {
+            padding-right: 20px;
+          }
+        }
+        
+        .header {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        
+        .title {
+          color: #000;
+          font: 400 48px/30px Bakbak One, sans-serif;
+          
+          @media (max-width: 991px) {
+            font-size: 38px;
+            line-height: 28px;
+          }
+        }
+        
+        .subtitle {
+          color: #777;
+          font-family: Bahnschrift, -apple-system, Roboto, Helvetica, sans-serif;
+          font-size: 14px;
+          margin-top: 0%;
+        }
+        
+        .buy-button {
+          align-self: flex-end;
+          margin-top: 10px;
+          
+        }
+        
+        .buy-link {
+          color: #ffffff;
+          white-space: nowrap;
+          border-radius: 28px;
+          background-color: #33a198;
+          justify-content: center;
+          padding: 23px 37px;
+          font: 400 24px/125% Baloo, sans-serif;
+          
+          @media (max-width: 991px) {
+            white-space: initial;
+            padding: 0 20px;
+          }
+        }
+        
+        .image-container {
+          display: flex;
+          flex-direction: column;
+          line-height: normal;
+          margin-left: 20px;
+          
+        }
+        
+        @media (max-width: 99px) {
+          .image-container {
+            margin-left: 0;
+            margin-top: 0px;
+          }
+        }
+        
+        .image {
+          aspect-ratio: 1.11;
+          object-fit: contain;
+          object-position: center;
+          width: 120px;
+          overflow: hidden;
+          max-width: 100%;
+          
+          left: 14%;
+          top: 86%;
+          
+          
+        }
+      </style>
+
+<div class="main-container1">
+    <header class="header1">
+      <h2 class="title1">Echo Dot</h2>
+      <span class="subtitle1">Amazon (4th Generation)</span>
+    </header>
+    <div class="buy-button1">
+      <a href="#" class="buy-link1">Buy</a>
+    </div>
+    <div class="image-container1">
+      <img srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/00544020ae75d08d70ea3b4995090f32bc631159f72b21ae244b868867c10636?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/00544020ae75d08d70ea3b4995090f32bc631159f72b21ae244b868867c10636?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/00544020ae75d08d70ea3b4995090f32bc631159f72b21ae244b868867c10636?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/00544020ae75d08d70ea3b4995090f32bc631159f72b21ae244b868867c10636?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/00544020ae75d08d70ea3b4995090f32bc631159f72b21ae244b868867c10636?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/00544020ae75d08d70ea3b4995090f32bc631159f72b21ae244b868867c10636?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/00544020ae75d08d70ea3b4995090f32bc631159f72b21ae244b868867c10636?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/00544020ae75d08d70ea3b4995090f32bc631159f72b21ae244b868867c10636?apiKey=a83078002d414708940523294f4b4bc7&"alt="XP-21 Image" class="image" loading="lazy">
+    </div>
+</div>
+<style>
+    .main-container1 {
+      border-radius: 48px;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+      background-color: #b3b7b8;
+      padding: 10px 27px 28px 19px;
+      width: 200px;
+      height: 150px;
+      
+      margin-left: 50%;
+    }
+    
+    @media (max-width: 991px) {
+      .main-container1 {
+        padding-right: 20px;
+      }
+    }
+    
+    .header1 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .title1 {
+      color: #000;
+      font: 400 48px/30px Bakbak One, sans-serif;
+      
+      @media (max-width: 991px) {
+        font-size: 38px;
+        line-height: 28px;
+      }
+    }
+    
+    .subtitle1 {
+      color: #777;
+      font-family: Bahnschrift, -apple-system, Roboto, Helvetica, sans-serif;
+      font-size: 14px;
+      margin-top: 0%;
+    }
+    
+    .buy-button1 {
+      align-self: flex-end;
+      margin-top: 10px;
+      
+    }
+    
+    .buy-link1 {
+      color: #ffffff;
+      white-space: nowrap;
+      border-radius: 28px;
+      background-color: #33a198;
+      justify-content: center;
+      padding: 23px 37px;
+      font: 400 24px/125% Baloo, sans-serif;
+      
+      @media (max-width: 991px) {
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+    
+    .image-container1 {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      margin-left: 20px;
+      
+    }
+    
+    @media (max-width: 99px) {
+      .image-container1 {
+        margin-left: 0;
+        margin-top: 0px;
+      }
+    }
+    
+    .image1 {
+      aspect-ratio: 1.11;
+      object-fit: contain;
+      object-position: center;
+      width: 120px;
+      overflow: hidden;
+      max-width: 100%;
+      
+      left: 14%;
+      top: 86%;
+      
+      
+    }
+  </style>
+
+  <div class="main-container2">
+    <header class="header2">
+      <h2 class="title2">Series 9</h2>
+      <span class="subtitle2">Apple Watch</span>
+    </header>
+    <div class="buy-button2">
+      <a href="#" class="buy-link2">Buy</a>
+    </div>
+    <div class="image-container2">
+      <img srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/43d48bd7fa19042e37420f1458a805e7c9bc43d8d43e68b93d6de2d30a28a4e5?apiKey=a83078002d414708940523294f4b4bc7&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/43d48bd7fa19042e37420f1458a805e7c9bc43d8d43e68b93d6de2d30a28a4e5?apiKey=a83078002d414708940523294f4b4bc7&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/43d48bd7fa19042e37420f1458a805e7c9bc43d8d43e68b93d6de2d30a28a4e5?apiKey=a83078002d414708940523294f4b4bc7&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/43d48bd7fa19042e37420f1458a805e7c9bc43d8d43e68b93d6de2d30a28a4e5?apiKey=a83078002d414708940523294f4b4bc7&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/43d48bd7fa19042e37420f1458a805e7c9bc43d8d43e68b93d6de2d30a28a4e5?apiKey=a83078002d414708940523294f4b4bc7&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/43d48bd7fa19042e37420f1458a805e7c9bc43d8d43e68b93d6de2d30a28a4e5?apiKey=a83078002d414708940523294f4b4bc7&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/43d48bd7fa19042e37420f1458a805e7c9bc43d8d43e68b93d6de2d30a28a4e5?apiKey=a83078002d414708940523294f4b4bc7&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/43d48bd7fa19042e37420f1458a805e7c9bc43d8d43e68b93d6de2d30a28a4e5?apiKey=a83078002d414708940523294f4b4bc7&"alt="XP-21 Image" class="image" loading="lazy">
+    </div>
+</div>
+<style>
+    .main-container2 {
+      border-radius: 48px;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+      background-color: #b3b7b8;
+      padding: 10px 27px 28px 19px;
+      width: 200px;
+      height: 150px;
+
+margin-right: 20%;
+    }
+    
+    @media (max-width: 991px) {
+      .main-container2 {
+        padding-right: 20px;
+      }
+    }
+    
+    .header2 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .title2 {
+      color: #000;
+      font: 400 48px/30px Bakbak One, sans-serif;
+      
+      @media (max-width: 991px) {
+        font-size: 38px;
+        line-height: 28px;
+      }
+    }
+    
+    .subtitle2 {
+      color: #777;
+      font-family: Bahnschrift, -apple-system, Roboto, Helvetica, sans-serif;
+      font-size: 14px;
+      margin-top: 0%;
+    }
+    
+    .buy-button2 {
+      align-self: flex-end;
+      margin-top: 10px;
+      
+    }
+    
+    .buy-link2 {
+      color: #ffffff;
+      white-space: nowrap;
+      border-radius: 28px;
+      background-color: #33a198;
+      justify-content: center;
+      padding: 23px 37px;
+      font: 400 24px/125% Baloo, sans-serif;
+      
+      @media (max-width: 991px) {
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+    
+    .image-container2 {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      margin-left: 20px;
+      
+    }
+    
+    @media (max-width: 99px) {
+      .image-container2 {
+        margin-left: 0;
+        margin-top: 0px;
+      }
+    }
+    
+    .image2 {
+      aspect-ratio: 1.11;
+      object-fit: contain;
+      object-position: center;
+      width: 120px;
+      overflow: hidden;
+      max-width: 100%;
+      
+      left: 14%;
+      top: 86%;
+      
+      
+    } -->
+  </style>
+
+</body>
+
+</html>
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
